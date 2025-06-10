@@ -31,7 +31,7 @@ function QuestPageProfileCard({ profile }: { profile: any }) {
       onClick={() => (window.location.href = `/signup?source=view_coder_${profile.id}`)}
     >
       <Card
-        className={`${cardBg} border-slate-200/90 h-full flex flex-col overflow-hidden transition-all duration-300 group hover:shadow-lg`}
+        className={`bg-white border-slate-200/90 h-full flex flex-col overflow-hidden transition-all duration-300 group hover:shadow-lg`}
       >
         <CardHeader className="p-3">
           <div className="flex items-center gap-2">
@@ -43,18 +43,18 @@ function QuestPageProfileCard({ profile }: { profile: any }) {
               className="w-10 h-10 rounded-full border-2 border-vibe-blue-light/70 object-cover"
             />
             <div>
-              <CardTitle className={`text-sm font-semibold ${titleText} group-hover:text-vibe-blue`}>
+              <CardTitle className={`text-sm font-semibold text-vibe-blue-dark group-hover:text-vibe-blue`}>
                 {profile.name}
               </CardTitle>
-              <CardDescription className={`text-xs ${descText}`}>{profile.vibe}</CardDescription>
+              <CardDescription className={`text-xs text-vibe-blue-dark`}>{profile.vibe}</CardDescription>
             </div>
           </div>
         </CardHeader>
-        <CardContent className="p-3 text-xs text-vibe-text-medium flex-grow">
+        <CardContent className="p-3 text-xs bg-vibe-blue-light/10 text-vibe-blue-dark flex-grow">
           <p className="line-clamp-2">{profile.bio}</p>
         </CardContent>
         <CardFooter className="p-3">
-          <Badge variant="outline" className={`text-xs ${skillBadge}`}>
+          <Badge variant="outline" className="text-xs bg-vibe-blue-light/80 text-vibe-blue-dark border-vibe-blue">
             {profile.skills[0]}
           </Badge>
         </CardFooter>

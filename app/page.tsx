@@ -357,18 +357,26 @@ function ProfileCard({
             </div>
           </div>
           <div className="absolute bottom-4 left-4">
-            <div className={`w-16 h-16 rounded-full ${avatarBg} border-2 border-slate-300 overflow-hidden shadow-md`}>
-              <Image
-                src={profile.avatar || "/placeholder.svg?width=64&height=64&query=avatar"}
-                alt={profile.name}
-                width={64}
-                height={64}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {profile.avatar && profile.avatar !== "" ? (
+              <div className={`w-16 h-16 rounded-full ${avatarBg} border-2 border-slate-300 overflow-hidden shadow-md`}>
+                <Image
+                  src={profile.avatar}
+                  alt={profile.name}
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ) : (
+              <div className="w-16 h-16 rounded-full bg-black border-2 border-slate-300 overflow-hidden shadow-md flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">
+                  {profile.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2)}
+                </span>
+              </div>
+            )}
           </div>
           <div className="absolute top-4 right-4 flex gap-2">
-            <Badge className={`bg-vibe-pink/80 text-pink-800 border border-transparent`}>{profile.status}</Badge>
+            <Badge className={`bg-vibe-pink/80 text-pink-800 border border-transparent ${profile.status === "Available" ? "bg-green-500/80 text-green-900 border-green-600" : "bg-gray-500/80 text-gray-900 border-gray-600"}`}>{profile.status}</Badge>
             <Badge
               variant="outline"
               className="text-xs text-vibe-text-medium border-slate-300 bg-white/70 backdrop-blur-sm"

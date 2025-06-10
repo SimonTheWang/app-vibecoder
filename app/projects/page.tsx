@@ -292,19 +292,7 @@ function ProjectCard({
           )}
           <Badge className={`${project.theme.badgeBg} ${project.theme.badgeText} text-xs`}>{project.category}</Badge>
         </div>
-        <div className="absolute top-3 right-3">
-          <Badge
-            className={`${
-              project.coderStatus === "Available"
-                ? "bg-green-100 text-green-800 border-green-300"
-                : project.coderStatus === "Busy"
-                  ? "bg-orange-100 text-orange-800 border-orange-300"
-                  : "bg-gray-100 text-gray-800 border-gray-300"
-            } text-xs`}
-          >
-            {project.coderStatus}
-          </Badge>
-        </div>
+
       </div>
 
       <CardHeader className="pb-3">

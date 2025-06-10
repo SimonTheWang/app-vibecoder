@@ -110,15 +110,9 @@ export default function QuestDetailPage() {
                   <quest.icon className={`h-8 w-8 ${quest.theme.titleText}`} />
                 </div>
                 <div>
-                  <Badge
-                    className={`${
-                      quest.status === "Featured"
-                        ? "bg-yellow-500/80 text-yellow-900 border-yellow-600"
-                        : quest.status === "Open"
-                          ? "bg-green-500/80 text-green-900 border-green-600"
-                          : "bg-gray-500/80 text-gray-900 border-gray-600"
-                    } text-xs font-semibold mb-1`}
-                  >
+                  <Badge className={
+                    `bg-vibe-blue-light/80 text-vibe-blue-dark border-vibe-blue text-xs font-semibold mb-1`
+                  }>
                     {quest.status}
                   </Badge>
                   <h1 className={`text-3xl md:text-4xl font-bold ${quest.theme.titleText}`}>{quest.title}</h1>
@@ -137,10 +131,10 @@ export default function QuestDetailPage() {
             </div>
           </CardHeader>
 
-          <CardContent className="p-6 md:p-8 space-y-8">
+          <CardContent className="p-6 md:p-8 space-y-8 bg-vibe-blue-light/10 text-vibe-blue-dark">
             <section>
               <h2 className={`text-2xl font-semibold ${quest.theme.titleText} mb-3`}>Quest Details</h2>
-              <p className="text-ghibli-muted leading-relaxed whitespace-pre-line">{quest.description}</p>
+              <p className="text-ghibli-muted leading-relaxed whitespace-pre-line text-vibe-blue-dark">{quest.description}</p>
             </section>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -151,7 +145,7 @@ export default function QuestDetailPage() {
                     Prize & Timeline
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-2">
+                <CardContent className="space-y-2 bg-vibe-blue-light/10 text-vibe-blue-dark">
                   <p className={`text-2xl font-bold ${quest.theme.prizeText}`}>{quest.prize}</p>
                   <div className="flex items-center text-ghibli-muted">
                     <CalendarDays size={16} className="mr-2" />
@@ -172,7 +166,7 @@ export default function QuestDetailPage() {
                     Required Vibe
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="bg-vibe-blue-light/10 text-vibe-blue-dark">
                   <p className={`text-xl font-semibold ${quest.theme.descText}`}>{quest.vibe}</p>
                   <p className="text-sm text-ghibli-muted mt-1">
                     Match your unique coding style to this quest's energy!
@@ -185,7 +179,7 @@ export default function QuestDetailPage() {
               <h2 className={`text-2xl font-semibold ${quest.theme.titleText} mb-3`}>Skills Needed</h2>
               <div className="flex flex-wrap gap-2">
                 {quest.skillsNeeded.map((skill) => (
-                  <Badge key={skill} className={`${quest.theme.skillBadge} px-3 py-1 text-sm`}>
+                  <Badge key={skill} className="bg-vibe-blue-light/80 text-vibe-blue-dark border-vibe-blue px-3 py-1 text-sm">
                     {skill}
                   </Badge>
                 ))}

@@ -10,6 +10,8 @@ import { useToast } from "@/hooks/use-toast"
 import { saveToWaitlist } from "@/app/actions/waitlist-actions"
 import { Loader2 } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("")
@@ -64,7 +66,7 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-vibe-bg-soft via-vibe-blue-light/20 to-vibe-pink/10 flex items-center justify-center p-4">
       {/* Floating Orbs Background */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         {Array.from({ length: 6 }).map((_, i) => (
@@ -85,13 +87,19 @@ export default function SignUpPage() {
       </div>
 
       <div className="relative z-10 w-full max-w-md">
-        <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-slate-200/50 p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-slate-800 mb-2">Sign Up</h1>
-            <p className="text-slate-600">Join the PersonalVibeCoder community</p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-2xl border border-slate-200 p-8 text-center">
+          <Image
+            src="/vibecoder_logo.png"
+            alt="VibeCoder Logo"
+            width={64}
+            height={64}
+            className="mx-auto mb-6 h-16 w-16"
+          />
+          <h1 className="text-4xl font-bold text-vibe-blue-dark mb-4">Sign Up for VibeCoder</h1>
+          <p className="text-vibe-text-medium mb-8 text-lg">
+            Join our community of talented developers and connect with exciting projects.
+          </p>
+          <form onSubmit={handleSubmit} className="space-y-6 text-left">
             {/* Email Field */}
             <div className="space-y-2">
               <Label htmlFor="email" className="text-slate-700 font-medium">
@@ -108,13 +116,11 @@ export default function SignUpPage() {
                 required
               />
             </div>
-
             {/* User Type Selection */}
             <div className="space-y-3">
               <Label className="text-slate-700 font-medium">
                 Are You a <span className="text-red-500">*</span>
               </Label>
-
               <div className="space-y-3">
                 <button
                   type="button"
@@ -137,7 +143,6 @@ export default function SignUpPage() {
                     <span className="font-medium">Vibe Coder</span>
                   </div>
                 </button>
-
                 <button
                   type="button"
                   onClick={() => setUserType("seeker")}
@@ -161,12 +166,11 @@ export default function SignUpPage() {
                 </button>
               </div>
             </div>
-
             {/* Submit Button */}
             <Button
               type="submit"
               disabled={isPending || !email || !userType}
-              className="w-full py-3 px-6 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-4 px-6 bg-vibe-blue hover:bg-vibe-blue/90 text-white font-semibold text-lg rounded-xl transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isPending ? (
                 <>
@@ -178,7 +182,6 @@ export default function SignUpPage() {
               )}
             </Button>
           </form>
-
           {source && source !== "direct_signup" && (
             <div className="mt-6 p-3 bg-slate-50 rounded-lg border border-slate-200">
               <p className="text-xs text-slate-600 text-center">
@@ -186,6 +189,11 @@ export default function SignUpPage() {
               </p>
             </div>
           )}
+          <Link href="/" passHref>
+            <Button variant="link" className="mt-6 text-vibe-blue hover:text-vibe-blue-dark w-full">
+              Or, explore coders first
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

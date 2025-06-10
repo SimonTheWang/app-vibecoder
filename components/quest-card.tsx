@@ -46,15 +46,7 @@ export function QuestCard({ quest, onApply, isClickable = false, isPreview = fal
             <div className={`p-1.5 rounded-md bg-vibe-blue-light/40 mr-2 shadow-sm`}>
               <quest.icon className={`h-5 w-5 text-vibe-blue-dark`} />
             </div>
-            <Badge
-              className={`${
-                quest.status === "Featured"
-                  ? "bg-yellow-400/80 text-yellow-800 border-yellow-500"
-                  : quest.status === "Open"
-                    ? "bg-green-400/80 text-green-800 border-green-500"
-                    : "bg-slate-300/80 text-slate-700 border-slate-400"
-              } text-xs px-1.5 py-0.5 font-semibold`}
-            >
+            <Badge className="bg-vibe-blue-light/80 text-vibe-blue-dark border-vibe-blue text-xs px-1.5 py-0.5 font-semibold">
               {quest.status}
             </Badge>
           </div>
@@ -62,7 +54,7 @@ export function QuestCard({ quest, onApply, isClickable = false, isPreview = fal
             {quest.title}
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-grow space-y-2 relative z-10 px-3 pb-2 pt-1">
+        <CardContent className="flex-grow space-y-2 relative z-10 px-3 pb-2 pt-1 bg-vibe-blue-light/10 text-vibe-blue-dark">
           <p className={`text-vibe-text-medium text-xs line-clamp-2`}>{quest.description}</p>
         </CardContent>
         <CardFooter className="relative z-10 flex justify-between items-center pt-2 pb-3 px-3 border-t border-slate-200/70">
@@ -93,15 +85,7 @@ export function QuestCard({ quest, onApply, isClickable = false, isPreview = fal
           <div className={`p-2 rounded-lg bg-vibe-blue-light/40 mr-3 shadow-sm`}>
             <quest.icon className={`h-6 w-6 text-vibe-blue-dark`} />
           </div>
-          <Badge
-            className={`${
-              quest.status === "Featured"
-                ? "bg-yellow-400/80 text-yellow-800 border-yellow-500"
-                : quest.status === "Open"
-                  ? "bg-green-400/80 text-green-800 border-green-500"
-                  : "bg-slate-300/80 text-slate-700 border-slate-400"
-            } text-xs font-semibold`}
-          >
+          <Badge className="bg-vibe-blue-light/80 text-vibe-blue-dark border-vibe-blue text-xs font-semibold">
             {quest.status}
           </Badge>
         </div>
@@ -119,18 +103,18 @@ export function QuestCard({ quest, onApply, isClickable = false, isPreview = fal
           Posted by {quest.postedBy}
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex-grow space-y-3 relative z-10">
-        <p className={`${descTextClass} text-sm line-clamp-3`}>{quest.description}</p>
+      <CardContent className="flex-grow space-y-3 relative z-10 bg-vibe-blue-light/10 text-vibe-blue-dark">
+        <p className={`text-sm line-clamp-3`}>{quest.description}</p>
         <div>
           <h4 className="text-xs font-semibold uppercase text-vibe-text-light mb-1">Skills Needed:</h4>
           <div className="flex flex-wrap gap-1.5">
             {quest.skillsNeeded.slice(0, 4).map((skill) => (
-              <Badge key={skill} className={`${skillBadgeClass} text-xs`}>
+              <Badge key={skill} className="bg-vibe-blue-light/80 text-vibe-blue-dark border-vibe-blue text-xs">
                 {skill}
               </Badge>
             ))}
             {quest.skillsNeeded.length > 4 && (
-              <Badge className={`${skillBadgeClass} text-xs`}>+{quest.skillsNeeded.length - 4} more</Badge>
+              <Badge className="bg-vibe-blue-light/80 text-vibe-blue-dark border-vibe-blue text-xs">+{quest.skillsNeeded.length - 4} more</Badge>
             )}
           </div>
         </div>

@@ -534,7 +534,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 31,
     likes: 312,
     status: "Available",
-    avatar: "/images/ocean_dreamer.jpeg",
+    avatar: "",
     themeIcon: "🌊",
     skills: [
       "React",
@@ -846,7 +846,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 34,
     likes: 267,
     status: "Available",
-    avatar: "/images/quantum_coder.png",
+    avatar: "",
     themeIcon: "⚛️",
     skills: [
       "React",
@@ -961,7 +961,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 37,
     likes: 278,
     status: "Available",
-    avatar: "/images/eco_tech_developer.png",
+    avatar: "",
     themeIcon: "🌱",
     skills: [
       "React",
@@ -1076,7 +1076,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 41,
     likes: 312,
     status: "Available",
-    avatar: "/images/accessibility_advocate.png",
+    avatar: "",
     themeIcon: "♿",
     skills: [
       "React",
@@ -1191,7 +1191,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 28,
     likes: 298,
     status: "Available",
-    avatar: "/images/ai_whisperer.png",
+    avatar: "",
     themeIcon: "🧠",
     skills: [
       "Machine Learning",
@@ -1306,7 +1306,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 26,
     likes: 189,
     status: "Available",
-    avatar: "/images/sound_architect.png",
+    avatar: "",
     themeIcon: "🎵",
     skills: [
       "Web Audio API",
@@ -1423,7 +1423,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 23,
     likes: 198,
     status: "Available",
-    avatar: "/images/blockchain_sage.png",
+    avatar: "",
     themeIcon: "⛓️",
     skills: [
       "Solidity",
@@ -1518,7 +1518,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 56,
     likes: 423,
     status: "Busy",
-    avatar: "/images/data_wizard.png",
+    avatar: "",
     themeIcon: "📊",
     skills: [
       "Python",
@@ -1612,7 +1612,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 44,
     likes: 267,
     status: "Available",
-    avatar: "/images/cloud_architect.png",
+    avatar: "",
     themeIcon: "☁️",
     skills: [
       "AWS",
@@ -1707,7 +1707,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 52,
     likes: 234,
     status: "Available",
-    avatar: "/images/mobile_maverick.png",
+    avatar: "",
     themeIcon: "📱",
     skills: [
       "React Native",
@@ -1801,7 +1801,7 @@ export const coderProfiles: CoderProfile[] = [
     projects: 31,
     likes: 187,
     status: "Available",
-    avatar: "/images/security_guardian.png",
+    avatar: "",
     themeIcon: "🛡️",
     skills: [
       "Cybersecurity",
